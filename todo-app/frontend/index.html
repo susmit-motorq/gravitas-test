@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Todo Application</h1>
+            <p>Manage your tasks efficiently</p>
+        </header>
+
+        <main>
+            <!-- Add Todo Form -->
+            <section class="add-todo-section">
+                <form id="add-todo-form" class="add-todo-form">
+                    <input 
+                        type="text" 
+                        id="todo-input" 
+                        placeholder="Enter a new todo..." 
+                        required
+                        maxlength="200"
+                    >
+                    <button type="submit" class="add-btn">
+                        <span>Add Todo</span>
+                    </button>
+                </form>
+            </section>
+
+            <!-- Todo Stats -->
+            <section class="stats-section">
+                <div class="stats">
+                    <span class="stat-item">
+                        Total: <span id="total-count">0</span>
+                    </span>
+                    <span class="stat-item">
+                        Completed: <span id="completed-count">0</span>
+                    </span>
+                    <span class="stat-item">
+                        Remaining: <span id="remaining-count">0</span>
+                    </span>
+                </div>
+            </section>
+
+            <!-- Todo List -->
+            <section class="todo-list-section">
+                <div id="todo-list" class="todo-list">
+                    <!-- Todos will be dynamically inserted here -->
+                </div>
+                
+                <!-- Empty state -->
+                <div id="empty-state" class="empty-state">
+                    <div class="empty-icon">📝</div>
+                    <h3>No todos yet</h3>
+                    <p>Add your first todo above to get started!</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Loading indicator -->
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <span>Loading...</span>
+        </div>
+
+        <!-- Error message -->
+        <div id="error-message" class="error-message hidden">
+            <span id="error-text"></span>
+            <button id="close-error" class="close-error">&times;</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
