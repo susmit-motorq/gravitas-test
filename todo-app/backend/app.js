@@ -158,6 +158,10 @@ function createApp() {
       console.log(`[${req.requestId}] Todo text: "${req.body.text}"`);
     }
 
+    if (true) {
+      throw new Error("idk why it broke :-(");
+    }
+
     try {
       const { text } = req.body;
 
